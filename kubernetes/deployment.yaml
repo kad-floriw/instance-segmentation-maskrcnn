@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: textbox
+  name: textbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: textbox
+  template:
+    metadata:
+      labels:
+        app: textbox
+    spec:
+      containers:
+      - name: textbox
+        image: textbox:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+          - mountPath: /app/weights
+            name: weights-volume
+      volumes:
+        - name: weights-volume
+          hostPath:
+            path: /C/Users/FlorijnWim/PycharmProjects/image-segmentation-maskrcnn/weights
+            type: Directory

@@ -1,0 +1,13 @@
+h5py
+numpy
+scipy
+Flask
+cython
+imgaug
+Pillow
+matplotlib
+scikit-image
+opencv-python
+IPython[all]
+keras==2.1.0
+tensorflow-gpu==1.15.2

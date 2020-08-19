@@ -1,0 +1,12 @@
+.idea/
+.ipynb_checkpoints/
+
+mrcnn/__pycache__
+assets/
+cocoapi-master/
+logs/
+train_data/
+samples/
+env/
+mask_rcnn_coco.h5
+weights/

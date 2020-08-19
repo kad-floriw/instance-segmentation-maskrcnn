@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - 5003:5003
+    environment:
+      - WORKERS=1
+      - PORT=5003
+      - TIMEOUT=60
+      - MAX_REQUESTS=500
+      - WEIGHTS=/app/weights/detector_weights.h5
+    volumes:
+      - ./weights:/app/weights
