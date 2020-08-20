@@ -6,7 +6,7 @@ ARG PORT=5000
 ARG WORKERS=1
 ARG TIMEOUT=60
 ARG MAX_REQUESTS=500
-ARG WEIGHTS=/app/weights/detector_weights.h5
+ARG WEIGHTS=/app/weights/weights.h5
 
 RUN apt-get update \
  && apt-get install -y libsm6 libxext6 libxrender-dev

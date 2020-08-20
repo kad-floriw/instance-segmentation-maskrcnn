@@ -11,6 +11,6 @@ services:
       - PORT=5003
       - TIMEOUT=60
       - MAX_REQUESTS=500
-      - WEIGHTS=/app/weights/detector_weights.h5
+      - WEIGHTS=/app/weights/weights.h5
     volumes:
       - ./weights:/app/weights
