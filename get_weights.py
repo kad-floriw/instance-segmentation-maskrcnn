@@ -6,7 +6,7 @@ from azure.datalake.store import core, lib
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 BACKEND_TYPE = os.environ.get('BACKEND_TYPE')
-WEIGHTS_LOCATION = os.environ.get('WEIGHTS_LOCATION', 'cooked/vectorisation/model_weights/detector.h5')
+WEIGHTS_LOCATION = os.environ.get('WEIGHTS_LOCATION')
 
 
 class DataLakeFileSystem(core.AzureDLFileSystem):
