@@ -20,3 +20,8 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
+        envFrom:
+          - configMapRef:
+              name: textbox-conf
+          - secretRef:
+              name: azure-storage
