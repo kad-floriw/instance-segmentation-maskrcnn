@@ -112,7 +112,7 @@ def before_first_request():
 
     graph = tf.Graph()
     session = tf.Session(graph=graph)
-    weight_location = os.environ.get('WEIGHTS', os.path.join('weights', 'weights.h5'))
+    weight_location = os.path.join('weights', 'weights.h5')
     with graph.as_default():
         with session.as_default():
             model = MaskRCNN(mode='inference', config=InferenceConfig(), model_dir=str())

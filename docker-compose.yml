@@ -11,6 +11,9 @@ services:
       - PORT=5003
       - TIMEOUT=60
       - MAX_REQUESTS=500
-      - WEIGHTS=/app/weights/weights.h5
-    volumes:
-      - ./weights:/app/weights
+      - BACKEND_TYPE=DATALAKE  # DATALAKE or BLOBSTORAGE
+      - AZURE_TENANT_ID
+      - AZURE_NAME
+      - AZURE_CLIENT_ID
+      - AZURE_CLIENT_SECRET
+      - WEIGHTS_LOCATION=cooked/vectorisation/model_weights/detector.h5

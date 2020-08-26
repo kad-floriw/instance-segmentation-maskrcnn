@@ -5,7 +5,7 @@ import requests
 import numpy as np
 import matplotlib.pyplot as plt
 
-hostname, port = '127.0.0.1', '5000'
+hostname, port = '127.0.0.1', '5003'
 url = 'http://{hostname}:{port}/recognize'.format(hostname=hostname, port=port)
 
 

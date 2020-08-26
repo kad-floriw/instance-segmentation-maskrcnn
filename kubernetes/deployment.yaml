@@ -20,11 +20,3 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
-        volumeMounts:
-          - mountPath: /app/weights
-            name: weights-volume
-      volumes:
-        - name: weights-volume
-          hostPath:
-            path: /C/Users/FlorijnWim/PycharmProjects/image-segmentation-maskrcnn/weights
-            type: Directory
