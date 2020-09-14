@@ -16,4 +16,4 @@ services:
       - AZURE_NAME
       - AZURE_CLIENT_ID
       - AZURE_CLIENT_SECRET
-      - WEIGHTS_LOCATION=cooked/vectorisation/model_weights/detector.h5
+      - WEIGHTS_LOCATION=cooked/vectorisation/model_weights/textbox.h5

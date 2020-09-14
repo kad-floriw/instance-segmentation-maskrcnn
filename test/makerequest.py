@@ -10,7 +10,7 @@ url = 'http://{hostname}:{port}/recognize'.format(hostname=hostname, port=port)
 
 
 def test_recognize():
-    img = cv2.imread('../train_data/image.tif')
+    img = cv2.cvtColor(cv2.imread('../train_data/front (1).jpg'), cv2.COLOR_BGR2RGB)
     _, img_encoded = cv2.imencode('.png', img)
 
     files = {
@@ -27,7 +27,7 @@ def test_recognize():
         colour = [1., 2., 1.] if class_id == 1 else [2., 1., 1.]
         image_masked[mask[0], mask[1]] = image_masked[mask[0], mask[1]] * colour * alpha + (1 - alpha)
 
-    plt.imshow(cv2.cvtColor(np.hstack((img, image_masked)), cv2.COLOR_BGR2RGB))
+    plt.imshow(np.hstack((img, image_masked)))
     plt.show()
 
 
